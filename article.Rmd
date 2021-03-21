@@ -15,7 +15,14 @@ output:
     - --lua-filter=filters/extract-cito.lua
     - --citeproc
     - --lua-filter=filters/insert-cito-in-ref.lua
+  html_document:
+    pandoc_args:
+    - --lua-filter=filters/extract-cito.lua
+    - --citeproc
+    - --lua-filter=filters/insert-cito-in-ref.lua
 cito-bibliography: bibliography.bib
+csl: journal-of-cheminformatics.csl
+# to get all outputs: rmarkdown::render("article.Rmd", "all")
 ...
 
 
